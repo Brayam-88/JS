@@ -4,7 +4,8 @@ alert("a contituacion complete el formulario de ingreso para conocer nuestro veh
 let concesionariaSur =(prompt("ingrese su nombre"));
 let apellido =(prompt("ingrese su apellido"));
 let edad=(prompt("ingrese edad"));
-let pais=(prompt("ingrese su localidad"));
+let pais=(prompt("ingrese su localidad"),
+alert("tu localidad tiene un 25% en transferencia y seguro todo riesgo"));
 
 if( edad < 18){
     alert(" inhabilitado realizar esta operacion ")
@@ -29,13 +30,16 @@ class autosMarca {
     }
 }
 
-const ford =new autosMarca("ford, 3.200.000");
-const chevrolet =new autosMarca("chevrolet, 3.600.000");
-const fiat =new autosMarca("fiat, 2.500.000");
-const audi=new autosMarca("audi, 3.000.000");
+const ford =new autosMarca("ford", "3.200.000");
+const chevrolet =new autosMarca("chevrolet", "3.600.000");
+const fiat =new autosMarca("fiat", "2.500.000");
+const audi=new autosMarca("audi", "3.000.000");
 
 const arraysAutos = [ford, chevrolet, fiat, audi];
 console.log( "Marcas de autos disponibles");
 console.log(arraysAutos);
 
-arraysAutos.forEach(arraysAutos => console.log( autosMarca.marca));
+arraysAutos.forEach(autosMarca => console.log(autosMarca));
+const buscar =arraysAutos.find( autosMarca => autosMarca === ford);
+console.log("find");
+console.log(buscar);
